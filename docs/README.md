@@ -1,3 +1,5 @@
 # ADVPL DICAS
 
-Dicas e funções em ADVPL - BLOG - Exemplos - Referências de Documentação
+Dicas, Exemplos, Referências e Tutoriais em ADVPL
+
+[Funções](/functions/)
