@@ -1,0 +1,27 @@
+{
+  "name": "advpl",
+  "version": "1.0.0",
+  "description": "Dicas, Funcoes e Exemplos ADVPL",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgmti/advpl.git"
+  },
+  "keywords": [
+    "advpl",
+    "protheus"
+  ],
+  "author": "Thiago Mota <tgmspawn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgmti/advpl/issues"
+  },
+  "homepage": "https://github.com/tgmti/advpl#readme"
+}
