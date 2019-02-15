@@ -1,5 +1,6 @@
 module.exports = {
     base: '/advpl/',
+    theme: '',
     themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
