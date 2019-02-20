@@ -24,7 +24,9 @@
     "url": "https://github.com/tgmti/advpl/issues"
   },
   "homepage": "https://github.com/tgmti/advpl#readme",
-  "dependencies": {},
+  "dependencies": {
+    "vuepress-theme-meteorlxy": "^0.2.7"
+  },
   "devDependencies": {
     "vuepress": "^0.14.9"
   }
