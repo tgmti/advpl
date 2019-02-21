@@ -12,11 +12,13 @@ tags:
 
 ---
 
-## Retorna uma data válida para fiscal. Considerando finais de semana e feriados.
+## Descrição
 
-    > DataValida(dData,lProxima)
+Retorna uma data válida para fiscal. Considerando finais de semana e feriados.
 
-### Parâmetros
+    DataValida(dData,lProxima)
+
+## Parâmetros
 
 | Nome       | Tipo   | Descrição | Padrão | Obrigatório |
 | ---------- | ------ | --------- | ------ | ----------- |
@@ -25,11 +27,11 @@ tags:
 
 
 
-### Retorno
+## Retorno
  * Tipo: Data
  * Descrição: Retorna a primeira data válida imediatamente após (ou antes) a partir da data informada.
 
-### Exemplos
+## Exemplos
 
     > DataValida(data_domingo,.T.) // Retorna data de segunda
     > DataValida(data_domingo,.F.) // Retorna data de sexta

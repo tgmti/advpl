@@ -6,7 +6,7 @@ description: 'Outra função para teste'
 tags: 
     - Datas
     - Strings
-date: 2019-02-28
+date: 2019-02-01
 ---
 
 # Apenas um post
