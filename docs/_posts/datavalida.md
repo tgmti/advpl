@@ -1,7 +1,18 @@
+---
+layout: post
+category: functions
+title: DataValida
+description: Retorna uma data válida para fiscal. Considerando finais de semana e feriados.
+date: 2019-02-04
 
-# DataValida
+tags:
+    - Data e Hora
+    - Financeiro
+    - Fiscal
 
-Retorna uma data válida para fiscal. Considerando finais de semana e feriados.
+---
+
+## Retorna uma data válida para fiscal. Considerando finais de semana e feriados.
 
     > DataValida(dData,lProxima)
 

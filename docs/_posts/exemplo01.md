@@ -1,7 +1,7 @@
 ---
 layout: post
-category: Exemplos
+category: blog
 title: 'Exemplo 01'
 description: 'Primeiro Exemplo'
-date: 2019-01-15
+date: 2019-02-05
 ---

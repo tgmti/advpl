@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/tgmti/advpl#readme",
   "dependencies": {
-    "vuepress-theme-meteorlxy": "^0.2.7"
+    "vuepress-theme-meteorlxy": "^1.0.0-alpha.11"
   },
   "devDependencies": {
-    "vuepress": "^0.14.9"
+    "vuepress": "^1.0.0-alpha.39"
   }
 }

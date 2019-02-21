@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Exemplos
+category: examples
 title: 'Outra Função'
 description: 'Outra função para teste'
 tags: 

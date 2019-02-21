@@ -5,15 +5,16 @@ module.exports = {
   
   head: [["link", { rel: "icon", href: "/assets/img/avatar.jpg" }]],
 
-  theme: "meteorlxy",
+  theme: "vuepress-theme-meteorlxy",
   themeConfig: {
     nav: [
       { text: "Home", exact: true, link: "/" },
-      { text: "Funções", exact: false, link: "/functions/" },
-      { text: "Exemplos", exact: false, link: "/examples/" },
-      { text: "Como fazer", exact: false, link: "/howto/" },
-      { text: "Contribuir", exact: false, link: "/contribution/" },
-      { text: "Sobre", exact: false, link: "/about.md" }
+      { text: "Funções", exact: false, link: "/posts/categories/functions/" },
+      { text: "Exemplos", exact: false, link: "/posts/categories/examples/" },
+      { text: "Como fazer", exact: false, link: "/posts/categories/howto/" },
+      { text: "Blog", exact: false, link: "/posts/categories/blog/" },
+      { text: "Contribuir", exact: false, link: "/posts/categories/contribution/" },
+      { text: "Sobre", exact: false, link: "/about/" }
     ],
     sidebar: "auto",
     personalInfo: {
@@ -23,7 +24,7 @@ module.exports = {
       location: "Cascavel - PR",
       organization: "TGM",
 
-      avator: "/advpl/assets/img/avatar.jpg",
+      avatar: "/advpl/assets/img/avatar.jpg",
 
       sns: {
         github: {
@@ -67,7 +68,7 @@ module.exports = {
 
   chainWebpack: (config, isServer) => {
     if (isServer === false) {
-      config.node.set('Buffer', false)
+      //config.node.set('Buffer', false)
 
       config.optimization.splitChunks({
         maxInitialRequests: 5,
