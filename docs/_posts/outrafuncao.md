@@ -1,9 +1,12 @@
 ---
 layout: post
-category: Funções
-title: 'Data Valida'
-description: 'Função Data Valida'
-date: 2019-02-15
+category: Exemplos
+title: 'Outra Função'
+description: 'Outra função para teste'
+tags: 
+    - Datas
+    - Strings
+date: 2019-02-28
 ---
 
 # Apenas um post

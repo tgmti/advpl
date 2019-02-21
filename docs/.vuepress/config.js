@@ -46,7 +46,7 @@ module.exports = {
     },
     locales: {
       "/": {
-        lang: "pt-BR"
+        lang: "en-US"
       }
     },
 
