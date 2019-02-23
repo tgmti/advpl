@@ -15,6 +15,7 @@
       </main>
 
       <aside class="aside">
+        <SearchBox/>
         <InfoCard class="main-div" />
 
         <PostNavCard
@@ -38,6 +39,7 @@ import Tags from './layouts/Tags.vue'
 import Categories from './layouts/Categories.vue'
 import Tag from './layouts/Tag.vue'
 import Category from './layouts/Category.vue'
+import SearchBox from '@SearchBox'
 
 export default {
   name: 'TheMain',
@@ -55,6 +57,7 @@ export default {
     Categories,
     Tag,
     Category,
+    SearchBox,
     /* eslint-enable vue/no-unused-components */
   },
 
