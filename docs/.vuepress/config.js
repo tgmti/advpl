@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   title: "ADVPL Dicas",
   description: "Dicas, Exemplos, Referências e Tutoriais em ADVPL",
@@ -5,7 +7,7 @@ module.exports = {
   
   head: [["link", { rel: "icon", href: "/assets/img/avatar.jpg" }]],
 
-  theme: "vuepress-theme-meteorlxy",
+  theme: path.resolve(__dirname, '../../meteorlxy_local_theme'),
   themeConfig: {
     nav: [
       { text: "Home", exact: true, link: "/" },
