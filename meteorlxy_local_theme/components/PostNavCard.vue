@@ -10,7 +10,7 @@
     >
       <Icon name="book" />
 
-      <span>Local do arquivo</span>
+      <span>Conteúdo</span>
 
       <ul>
         <template v-for="h in $page.headers">
