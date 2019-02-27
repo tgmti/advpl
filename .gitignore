@@ -1,3 +1,4 @@
 GH_TOKEN
 node_modules
 .vscode
+.temp
