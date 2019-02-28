@@ -1,0 +1,3 @@
+[submodule "vuepress-theme-meteorlxy"]
+	path = vuepress-theme-meteorlxy
+	url = https://github.com/tgmti/vuepress-theme-meteorlxy.git

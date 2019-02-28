@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/tgmti/advpl/issues"
   },
-  "homepage": "https://github.com/tgmti/advpl#readme"
+  "homepage": "https://github.com/tgmti/advpl#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.40"
+  },
+  "dependencies": {
+    "vuepress-theme-meteorlxy": "^1.0.0-alpha.17"
+  }
 }

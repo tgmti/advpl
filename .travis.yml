@@ -10,9 +10,9 @@ addons:
         packages:
             - g++-4.8
 install:
-    - npm install -g vuepress
+    - yarn
 script:
-    - npm run docs:build
+    - yarn build
 cache:
     directories:
         - "node_modules"
