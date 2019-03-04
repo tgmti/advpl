@@ -12,12 +12,21 @@ tags:
 ---
 # Mais um blog com Dicas de ADVPL
 
-Mas afinal, é só mais um blog sobre ADVPL?
-Sim e Não.
-Sim, porque após X anos trabalhando com isso, devo ter alguma coisa pra compartilhar
-Não, pois a ideia é um pouco diferente do que só criar um blog.
+Após 6 anos trabalhando em implantações e desenvolvendo customizações para o Protheus, tenho algumas receitas e anotações que me ajudam muito no dia a dia.
 
-A ideia é criar um projeto colaborativo, onde todos possam.
+Então resolvi criar esta página, para centralizar as anotações e tirar um pouco do Evernote.
+
+No mais, me serve também de incentivo para continuar estudando e me atualizando, tanto em ADVPL, para alimentar o conteúdo; quanto HTML, CSS e JavaScript, para manter a página.
+
+Mas pra quê? Afinal, é só mais um blog sobre ADVPL?
+
+__SIM e NÃO__.
+
+Sim, pois tem algumas coisas que posso compartilhar, e pode ser que ajude alguém.
+
+e Não, pois quero incluir algumas features direrentes de um um blog.
+
+A ideia é criar um projeto colaborativo, com dicas, exemplos, referências e tutoriais de desenvolvimento para o ambiente TOTVS.
 
 Não tão experimental quanto o Black TDN, nem tão teorico quanto o Tudo em ADVPL.
 Não é uma tentativa de substituir estes, tão pouco a documentação oficial.
@@ -34,7 +43,10 @@ Também quero adicionar ferramentas de terceiros, com a devida referência, e in
 
 A exemplo da minha ArrayUtils.
 
-"Se cheguei aqui, foi no ombro de gigantes"
+>       "Se eu vi mais longe, foi por estar sobre ombros de gigantes..."
+> 
+>                                                           Isaac Newton
+
 TDN
 BlackTDN
 SupeERP
