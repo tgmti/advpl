@@ -10,51 +10,59 @@ tags:
     - Projeto ADVPL Dicas
 
 ---
-# Mais um blog com Dicas de ADVPL
+# Mais um blog de ADVPL
+
+## Motivações
 
 Após 6 anos trabalhando em implantações e desenvolvendo customizações para o Protheus, tenho algumas receitas e anotações que me ajudam muito no dia a dia.
 
-Então resolvi criar esta página, para centralizar as anotações e tirar um pouco do Evernote.
+Estas anotações estão bem espalhadas, Evernote, e-mail, GitHub, Bitbucket. Então resolvi centralizar nesta página as receitas de "como fazer".
 
 No mais, me serve também de incentivo para continuar estudando e me atualizando, tanto em ADVPL, para alimentar o conteúdo; quanto HTML, CSS e JavaScript, para manter a página.
 
-Mas pra quê? Afinal, é só mais um blog sobre ADVPL?
+## Mas afinal, é só mais um blog sobre ADVPL?
 
-__SIM e NÃO__.
+Bom, __SIM e NÃO__.
 
-Sim, pois tem algumas coisas que posso compartilhar, e pode ser que ajude alguém.
+**Sim**, pois vão ter algumas postagens de blog, tem algumas coisas que posso compartilhar e pode ser que ajude alguém. Também porque estou usando um tema de blog.
 
-e Não, pois quero incluir algumas features direrentes de um um blog.
+E **Não**, pois quero incluir algumas features diferentes de um um blog.
 
-A ideia é criar um projeto colaborativo, com dicas, exemplos, referências e tutoriais de desenvolvimento para o ambiente TOTVS.
+## A Ideia
 
-Não tão experimental quanto o Black TDN, nem tão teorico quanto o Tudo em ADVPL.
-Não é uma tentativa de substituir estes, tão pouco a documentação oficial.
-É um complemento.
-O cerne do projeto é a página de funções e classes.
-Nela deve Exibir uma lista com a assinatura de todas funçoes e classes compiladas no RPO oficial.
-Inicialmente montei todos os posts automaticamente usando métodos de extração da própria plataforma.
+A ideia é criar um projeto colaborativo, com dicas, exemplos, referências e tutoriais de desenvolvimento para o ambiente TOTVS. Com informações práticas para o dia a dia, referenciando as fontes oficiais e não oficiais.
+
+Digo não oficiais também, pois não pretendo listar apenas as funções padrão, mas também ferramentas de terceiros que sejam abertas, com a devida referência, e instruções para utilização.
+
+## Página de Funções
+
+O cerne do projeto é a página de [funções e classes](/posts/categories/functions.html).
+
+Nela deverá Exibir uma lista com a assinatura de todas funções e classes compiladas no RPO. Para extrair estas funções, usei um método que detalho [aqui](/posts/2019/03/01/extrair-funcoes.html).
+
 O plano é ir Complementando a documentação com correções, exemplos e receitas.
-Eu pretendo que seja uma tela de consulta rápida, parecida com o "Guia ADVPL" que tem na Home do helpfacil (print da tela).
-A ideia é criar uma ferramenta com informações práticas para o dia a dia, referenciando as fontes oficiais e não oficiais.
 
-Digo também não oficiais, pois não pretendo listar apenas ferramentas que estão no padrão.
-Também quero adicionar ferramentas de terceiros, com a devida referência, e instruções para utilização.
+Pretendo que seja uma tela de consulta rápida, parecida com o "Guia ADVPL" que tem na Home do [HelpFacil](http://www.helpfacil.com.br/).
 
-A exemplo da minha ArrayUtils.
+![Guia ADVPL no HelpFacil](advpl/assets/img/posts/helpfacil-guia-advpl.jpg "Guia ADVPL no HelpFacil")
 
->       "Se eu vi mais longe, foi por estar sobre ombros de gigantes..."
+
+## Referências
+
+> "Se eu vi mais longe, foi por estar sobre ombros de gigantes..."
 > 
->                                                           Isaac Newton
+> Isaac Newton
 
-TDN
-BlackTDN
-SupeERP
-helpfacil
-masteradvpl
-Tudo em ADVPL
-ernaniforastieri
-mvcadvpl
-Terminal de informação
-User Function
-( adicionar outros, a medida que for lembrando e consultando )
+Alguns dos sites que acesso constantemente e muito me ajudam e me incentivaram a criar esta ferramenta.
+
+* TDN
+* BlackTDN
+* SupeERP
+* helpfacil
+* masteradvpl
+* Tudo em ADVPL
+* ernaniforastieri
+* mvcadvpl
+* Terminal de informação
+* User Function
+* ( adicionar outros, a medida que for lembrando e consultando )
