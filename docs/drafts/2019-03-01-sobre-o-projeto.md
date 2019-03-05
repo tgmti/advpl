@@ -46,18 +46,17 @@ Pretendo que seja uma tela de consulta rápida, parecida com o "Guia ADVPL" que 
 
 ![Guia ADVPL no HelpFacil](advpl/assets/img/posts/helpfacil-guia-advpl.jpg "Guia ADVPL no HelpFacil")
 
-
 ## Referências
 
 > "Se eu vi mais longe, foi por estar sobre ombros de gigantes..."
-> 
+>
 > Isaac Newton
 
 Alguns dos sites que acesso constantemente e muito me ajudam.
 
 * [BlackTDN](http://www.blacktdn.com.br)
 * [Tudo em ADVPL](https://siga0984.wordpress.com/)
-* [SupeERP](http://www.supeerp.com/)
+* [SUPEERP](http://www.supeerp.com/)
 * [HelpFacil](http://helpfacil.com.br)
 * [Master Advpl](http://www.masteradvpl.com.br/)
 * [Ernani Forastieri](http://www.ernaniforastieri.com)
