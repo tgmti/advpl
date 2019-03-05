@@ -53,16 +53,15 @@ Pretendo que seja uma tela de consulta rápida, parecida com o "Guia ADVPL" que 
 > 
 > Isaac Newton
 
-Alguns dos sites que acesso constantemente e muito me ajudam e me incentivaram a criar esta ferramenta.
+Alguns dos sites que acesso constantemente e muito me ajudam.
 
-* TDN
-* BlackTDN
-* SupeERP
-* helpfacil
-* masteradvpl
-* Tudo em ADVPL
-* ernaniforastieri
-* mvcadvpl
-* Terminal de informação
-* User Function
-* ( adicionar outros, a medida que for lembrando e consultando )
+* [BlackTDN](http://www.blacktdn.com.br)
+* [Tudo em ADVPL](https://siga0984.wordpress.com/)
+* [SupeERP](http://www.supeerp.com/)
+* [HelpFacil](http://helpfacil.com.br)
+* [Master Advpl](http://www.masteradvpl.com.br/)
+* [Ernani Forastieri](http://www.ernaniforastieri.com)
+* [Desmistificando o MVC no ADVPL](https://mvcadvpl.wordpress.com)
+* [Terminal de Informação](http://terminaldeinformacao.com)
+* [User Function](http://userfunction.com.br)
+* [TDN](http://tdn.totvs.com)
