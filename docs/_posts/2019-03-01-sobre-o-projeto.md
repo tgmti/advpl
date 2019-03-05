@@ -4,11 +4,9 @@ category: blog
 title: Sobre o projeto
 description: Motivações e Expectativas para criação desta página
 date: 2019-03-01
-
 tags:
     - Blog
     - Projeto ADVPL Dicas
-
 ---
 # Mais um blog de ADVPL
 
@@ -44,7 +42,7 @@ O plano é ir Complementando a documentação com correções, exemplos e receit
 
 Pretendo que seja uma tela de consulta rápida, parecida com o "Guia ADVPL" que tem na Home do [HelpFacil](http://www.helpfacil.com.br/).
 
-![Guia ADVPL no HelpFacil](advpl/assets/img/posts/helpfacil-guia-advpl.jpg "Guia ADVPL no HelpFacil")
+![Guia ADVPL no HelpFacil](/advpl/assets/img/posts/helpfacil-guia-advpl.jpg "Guia ADVPL no HelpFacil")
 
 ## Referências
 

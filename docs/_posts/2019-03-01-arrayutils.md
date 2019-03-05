@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title: ArrayUtils - Conhecendo Javascript para melhorar o ADVPL
-description: Motivações e Expectativas para criação desta página
+description: Estudando Javascript criei ferramentas úteis para usar com ADVPL
 date: 2019-03-01
 
 tags:
