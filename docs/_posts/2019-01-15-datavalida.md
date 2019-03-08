@@ -32,7 +32,7 @@ DataValida(dData,lProxima)
 ||
 | **Retorno**   | **Lógico** | **próxima data (.T.) ou anterior (.F.)** | **.T.** |  |
 
-## Fonte
+## Programa Fonte
 
     DATAVALI.PRW
 
