@@ -34,9 +34,9 @@ Digo não oficiais também, pois não pretendo listar apenas as funções padrã
 
 ## Página de Funções
 
-O cerne do projeto é a página de [funções e classes](/posts/categories/functions.html).
+O cerne do projeto é a página de [funções e classes](/posts/categories/functions/).
 
-Nela deverá Exibir uma lista com a assinatura de todas funções e classes compiladas no RPO. Para extrair estas funções, usei um método que detalho [aqui](/posts/2019/03/01/extrair-funcoes.html).
+Nela deverá Exibir uma lista com a assinatura de todas funções e classes compiladas no RPO. Para extrair estas funções, usei um método que detalho [aqui](/posts/2019-03-05-extrair-funcoes.md).
 
 O plano é ir Complementando a documentação com correções, exemplos e receitas.
 
