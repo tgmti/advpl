@@ -69,7 +69,10 @@ module.exports = {
   markdown: {
     toc: {
       includeLevel: [2, 3, 4]
-    }
+    },
+    config: md => {
+      md.use(require('markdown-it-task-lists'))
+    },
   },
 
 }
