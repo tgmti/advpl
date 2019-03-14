@@ -8,7 +8,7 @@ date: #3[data_extracao]#
 tags:
     - #4[tipo_funcao]#
     - Revisar
-  
+
 ---
 # #1
 
@@ -26,7 +26,7 @@ Dados exportados do RPO, esta página precisa ser revisada.
 | ----------  | ------------ | ------------------------ | ------------ | ----------- | ---------- |
 #6[Tabela Parametros]#
 |             |              |                          |              |             |            |
-| **Retorno** | **Lógico**   | **Descrição do retorno** | **Val. pad** |             |            |
+| **Retorno** | **TIPO**   | **DESCRICAO** | **VALOR PADRAO** |             |            |
 
 ## Programa Fonte
 
