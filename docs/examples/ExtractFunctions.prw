@@ -9,18 +9,27 @@
 
 @since 09/03/2019
 /*/
-User Function ExtFuncs()
+Function U_ExtFuncs()
 
-  /*
-    aHash:= {}
-    GetFunctions('*DATAVALI*')[2]:List(@aHash)
-    U_StdOutLn(aHash)
-    U_StdOutLn( U_ExtractFunctions() )
-  */
+  Local aPaginas
+  Local nX
+  Local cModelo:= MemoRead('\_expfunctions\modelo_funcao_var.md')
+  Local cExport:= '\_expfunctions\functions\#1-#2.md'
+  Local cMascara:= '*'
 
-  Local aPaginas:= ExtractFunctions('A*')
+  Set(_SET_DATEFORMAT, 'dd/mm/yyyy')
+
+  aPaginas:= ExtractFunctions(cMascara, cModelo)
+  
   CONOUT(LEN(aPaginas))
-  aEval(aPaginas, {|x| MemoWrite('\_expfunctions\2019-03-10-'+x[1] + '.md', x[2]) })
+
+  For nX:= 1 To Len(aPaginas)
+    Set(_SET_DATEFORMAT, 'yyyy-mm-dd')
+    cFileDat:= DToC(aPaginas[nX][3])
+    Set(_SET_DATEFORMAT, 'dd/mm/yyyy')
+    cFile:= i18n(cExport, { cFileDat , aPaginas[nX][1] })
+    MemoWrite( cFile , aPaginas[nX][2] )
+  Next nX
 
 Return
 
@@ -34,8 +43,7 @@ Return
 
 @since 09/03/2019
 /*/
-Static function ExtractFunctions(cMascara)
-  Local cModelo:= MemoRead('\_expfunctions\modelo_funcao_var.md')
+Static function ExtractFunctions(cMascara, cModelo)
   Local aFunctions:= GetFunctions(cMascara)
 
 Return ( MontaPagina( cModelo, aFunctions ) )
@@ -54,13 +62,16 @@ Static Function MontaPagina( cModelo, aDados )
 
     Local aPaginas:= {}
     Local aModelo
-    Local xTemp
-    Local aVarList:= { 'nome_funcao', 'nome_funcao', 'data_extract', 'tipo', 'parametros', 'desc_param', 'arquivo', 'data_hora'  }
+    Local nX
+
+    // Esse array deve estar na mesma ordem que os parâmetros no modelo para o i18n funcionar
+    Local aVarList:= { 'nome_funcao', 'nome_funcao', 'data_extract', ;
+      'tipo', 'parametros', 'desc_param', 'arquivo', 'data_hora' }
 
     For nX:= 1 To Len(aDados)
-      aModelo := aMap( aVarList, {|uVal, nInd| aDados[nX]:Get(uVal, @xTemp), xTemp } )
-      aDados[nX]:Get('nome_funcao', @xTemp)
-      aAdd( aPaginas, { xTemp, i18n(cModelo, aModelo) } )
+      aModelo := aMap( aVarList, {|uVal, nInd| aDados[nX][uVal] } )
+      
+      aAdd( aPaginas, { aDados[nX]['nome_funcao'], i18n(cModelo, aModelo), aDados[nX]['data_extract'] } )
     Next nX
 
 Return ( aPaginas )
@@ -77,7 +88,7 @@ Return ( aPaginas )
 /*/
 Static Function GetFunctions(cMascara)
 
-  Local oHash
+  Local oFunction
   Local aTipo:= {}
   Local aArquivo:= {}
   Local aLinha:= {}
@@ -86,28 +97,43 @@ Static Function GetFunctions(cMascara)
   Local aParam
   Local aRet:= {}
   Local nInd
-
   Local aFunctions := GetFuncArray( cMascara, @aTipo, @aArquivo, @aLinha, @aData, @aHora )
+  Local nTotFun:= Len(aFunctions)
 
-  CONOUT(LEN(aFunctions))
+  CONOUT('LISTA DAS FUNÇÕES ENCONTRADAS: ')
+  aEval(aFunctions, {|x| ConOut( x ) })
 
-  for nInd:= 1 To Len(aFunctions)
+  CONOUT('TOTAL DE FUNÇÕES ENCONTRADAS: ')
+  CONOUT(nTotFun)
+
+  for nInd:= 1 To nTotFun
+    
     cNomeFun:= aFunctions[nInd]
-    aParam:= DescParam(GetFuncPrm(cNomeFun))
-    oHash:= HMNew()
-    oHash:Set('nome_funcao' , cNomeFun )
-    oHash:Set('parametros'  , aParam[1] )
-    oHash:Set('tipo'        , If( Left(aTipo[nInd],1)=='U', 'User Function', 'Function' ) )
-    oHash:Set('arquivo'     , aArquivo[nInd] )
-    oHash:Set('data_hora'   , DtoC(aData[nInd]) + ' ' + aHora[nInd] )
-    oHash:Set('desc_param'  , aParam[2] )
-    oHash:Set('data_extract', MsDate() )
 
-    aAdd(aRet, oHash)
+    If Left(cNomeFun,1) == '%' .Or. cNomeFun == 'H_PWSA062'
+      Loop
+    EndIf
+
+    CONOUT(cValToChar(nInd)+'/'+cValToChar(nTotFun) + ' - Lendo dados da função ' + cNomeFun)
+    
+    aParam:= DescParam(GetFuncPrm(cNomeFun))
+
+    oFunction:= JsonObject():new()
+    oFunction['nome_funcao'] := cNomeFun
+    oFunction['parametros']  := aParam[1]
+    oFunction['tipo']        := If( Left(aTipo[nInd],1)=='U', 'User Function', 'Function' )
+    oFunction['arquivo']     := aArquivo[nInd]
+    oFunction['data_hora']   := DtoC(aData[nInd]) + ' ' + aHora[nInd]
+    oFunction['desc_param']  := aParam[2]
+    oFunction['data_extract']:= MsDate()
+
+    aAdd(aRet, oFunction)
   Next nInd
 
-  CONOUT(LEN(ARET))
-
+  CONOUT('')
+  CONOUT('TOTAL DE FUNÇÕES AVALIADAS')
+  CONOUT(LEN(aRet))
+  
 Return ( aRet )
 
 
@@ -127,32 +153,31 @@ Static Function DescParam( aParam )
   Local nX
   Local cTipo
 
-  Static aTipos
+  Static oTipos
 
   aParam:= aMap(aParam, {|x| Lower(Left(x,1)) + Capital(substr(x,2)) })
   cParams:= aJoin( aParam , ',')
 
 
-  If aTipos == Nil
-    aTipos:= HMNew()
-    aTipos:Set('L', 'Lógico')
-    aTipos:Set('C', 'Caractere')
-    aTipos:Set('D', 'Data')
-    aTipos:Set('B', 'Bloco de Código')
-    aTipos:Set('A', 'Array')
-    aTipos:Set('U', 'Qualquer Tipo')
-    aTipos:Set('X', 'Qualquer Tipo')
+  If oTipos == Nil
+    oTipos:= JsonObject():new()
+    oTipos['L']:= 'Lógico'
+    oTipos['C']:= 'Caractere'
+    oTipos['D']:= 'Data'
+    oTipos['B']:= 'Bloco de Código'
+    oTipos['A']:= 'Array'
+    oTipos['U']:= 'Qualquer Tipo'
+    oTipos['X']:= 'Qualquer Tipo'
   EndIf
 
   For nX:= 1 To Len(aParam)
     If !Empty(aParam[nX])
-      aTipos:Get(Upper(Left(aParam[nX],1)), @cTipo)
+      cTipo:= oTipos[ Upper(Left(aParam[nX],1)) ]
       cTipo:= iIf(Empty(cTipo), aParam[nX], cTipo)
-      cDescParam+= iif(nX > 1, Chr(10), '')
+      cDescParam+= iIf(nX > 1, Chr(10), '')
       cDescParam+= '| ' + aParam[nX] + ' | ' + cTipo + ' |   |   |   |   |'
     EndIf
   Next nX
-
 
 Return ( {cParams, cDescParam} )
 
