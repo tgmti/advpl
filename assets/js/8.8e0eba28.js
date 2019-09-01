@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{323:function(t,e,n){"use strict";n.r(e);var s={name:"Home",components:{PostsMain:n(293).a}},a=n(1),o=Object(a.a)(s,function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"home"},[e("PostsMain",{attrs:{"category-filter":!1,"tag-filter":!1}})],1)},[],!1,null,null,null);e.default=o.exports}}]);
