@@ -43,26 +43,30 @@ module.exports = {
   description: "Dicas, Exemplos, Referências e Tutoriais em ADVPL",
   base: '/advpl/',
   theme: path.resolve(__dirname, '../../vuepress-theme-meteorlxy/lib'),
-  
+
   head: [["link", { rel: "icon", href: "/assets/img/avatar.jpg" }]],
-  
+
   locales: {
     '/': {
       lang: 'pt-BR',
     },
-  },  
+  },
 
   themeConfig: {
-    
+
     lang: require(path.resolve(__dirname, '../../vuepress-theme-meteorlxy/lib/langs/pt-BR')),
 
     nav: nav,
     personalInfo: personalInfo,
-    
+
     // headerBackground priority: url > useGeo
     headerBackground: {
       // url: '/advpl/assets/img/bg.jpg',
-      useGeo: true
+      useGeo: true,
+    },
+
+    homeFilters: {
+      search: true,
     },
   },
 
