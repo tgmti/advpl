@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{320:function(t,s,a){"use strict";a.r(s);var n={name:"Tag",components:{PostsMain:a(293).a}},e=a(1),i=Object(e.a)(n,function(){var t=this.$createElement,s=this._self._c||t;return s("div",{staticClass:"tag"},[s("PostsMain",{attrs:{posts:this.$tag.posts,"tag-filter":!1}})],1)},[],!1,null,null,null);s.default=i.exports}}]);
