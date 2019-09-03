@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portinari quick start com Docker | ADVPL Dicas</title>
+    <meta name="description" content="Como iniciar uma telinha ou continuar um projeto sem baixar a internet inteira">
+    <link rel="icon" href="/advpl/assets/img/avatar.jpg">
+    
+    <link rel="preload" href="/advpl/assets/css/0.styles.94508f54.css" as="style"><link rel="preload" href="/advpl/assets/js/app.25d80dd1.js" as="script"><link rel="preload" href="/advpl/assets/js/6.b5ccae0f.js" as="script"><link rel="preload" href="/advpl/assets/js/8.7065637d.js" as="script"><link rel="prefetch" href="/advpl/assets/js/1.449b7aef.js"><link rel="prefetch" href="/advpl/assets/js/10.9f8db774.js"><link rel="prefetch" href="/advpl/assets/js/11.7e542550.js"><link rel="prefetch" href="/advpl/assets/js/12.8dd60044.js"><link rel="prefetch" href="/advpl/assets/js/13.2759e110.js"><link rel="prefetch" href="/advpl/assets/js/14.00b1a03b.js"><link rel="prefetch" href="/advpl/assets/js/15.5f51f917.js"><link rel="prefetch" href="/advpl/assets/js/16.bda2e562.js"><link rel="prefetch" href="/advpl/assets/js/17.58c557d9.js"><link rel="prefetch" href="/advpl/assets/js/18.4e5d900f.js"><link rel="prefetch" href="/advpl/assets/js/19.43db0cbd.js"><link rel="prefetch" href="/advpl/assets/js/20.8bdb82c6.js"><link rel="prefetch" href="/advpl/assets/js/21.f4c80729.js"><link rel="prefetch" href="/advpl/assets/js/22.0ffd9f44.js"><link rel="prefetch" href="/advpl/assets/js/23.094691c4.js"><link rel="prefetch" href="/advpl/assets/js/24.276ae0b0.js"><link rel="prefetch" href="/advpl/assets/js/3.dd121e99.js"><link rel="prefetch" href="/advpl/assets/js/4.0dcf11c1.js"><link rel="prefetch" href="/advpl/assets/js/5.48b065d9.js"><link rel="prefetch" href="/advpl/assets/js/7.7e278b9c.js"><link rel="prefetch" href="/advpl/assets/js/9.14174afb.js">
+    <link rel="stylesheet" href="/advpl/assets/css/0.styles.94508f54.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-21e17cc4><div data-v-1306b554 data-v-21e17cc4><nav class="navbar" data-v-1306b554><div class="container" data-v-1306b554><a href="/advpl/" class="router-link-active" data-v-1306b554><span class="navbar-site-name" data-v-1306b554>
+          ADVPL Dicas
+        </span></a> <div class="navbar-toggler" data-v-1306b554><svg class="icon" style="font-size:1.2em;" data-v-1306b554 data-v-1306b554><title data-v-1306b554 data-v-1306b554>menu</title><use xlink:href="#icon-menu" data-v-1306b554 data-v-1306b554></use></svg></div> <div class="navbar-links" data-v-1306b554><a href="/advpl/" class="navbar-link" data-v-1306b554>
+            Home
+          </a><a href="/advpl/posts/categories/functions/" class="navbar-link" data-v-1306b554>
+            Funções
+          </a><a href="/advpl/posts/categories/examples/" class="navbar-link" data-v-1306b554>
+            Exemplos
+          </a><a href="/advpl/posts/categories/howto/" class="navbar-link" data-v-1306b554>
+            Como fazer
+          </a><a href="/advpl/posts/categories/blog/" class="navbar-link" data-v-1306b554>
+            Blog
+          </a><a href="/advpl/posts/categories/contribution/" class="navbar-link" data-v-1306b554>
+            Contribuir
+          </a><a href="/advpl/about/" class="navbar-link" data-v-1306b554>
+            Sobre
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-1306b554></div></div> <div class="banner" data-v-7e077a7e data-v-21e17cc4 data-v-21e17cc4><div class="container" data-v-7e077a7e><div class="center" data-v-7e077a7e><h1 data-v-7e077a7e data-v-21e17cc4>
+          Portinari quick start com Docker
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-7f74dc4c data-v-7f74dc4c><main class="main" data-v-7f74dc4c><div class="post" data-v-7f74dc4c data-v-7f74dc4c><section class="post-meta main-div" data-v-3cabf638><section class="post-date clearfix" data-v-3cabf638><span class="create-date" data-v-3cabf638>
+      Criado : 2019-09-03
+    </span> <!----></section> <section class="post-links" data-v-3cabf638><a href="/advpl/posts/2019/09/01/regex-advpl.html" class="post-link" data-v-3cabf638>
+      Anterior : RegExp + ADVPL
+    </a> <!----></section></section> <article class="main-div"><div class="content default"><h1 id="portinari-quick-start-com-docker"><a href="#portinari-quick-start-com-docker" aria-hidden="true" class="header-anchor">#</a> Portinari quick start com Docker</h1> <h2 id="motivacao"><a href="#motivacao" aria-hidden="true" class="header-anchor">#</a> Motivação</h2> <p>Faz tempo que venho estudando esses frameworks Javascript da moda, tipo React, Vue e Angular.</p> <p>Agora com a liberação do THF como Portinari, resolvi dar um gás no Angular.</p> <p>Mas, cada vez que vou iniciar uma aplicação é aquela sofrência, npm install, baixa a internet inteira e aguarda.</p> <p>Bom, como também to estudando muito docker, achei facilmente um monte de imagens prontas, já com Node, Angular, Ionic e até com JDK do Java pra conectar com o device.</p> <p>Mas, usar o pronto não tem graça, o legal é fazer o meu mesmo. Então, dá-lhe quebrar a cabeça pra montar essas maquininhas:</p> <h2 id="testes-basicos"><a href="#testes-basicos" aria-hidden="true" class="header-anchor">#</a> Testes basicos</h2> <p>Comecei montando uma maquina simples, só instalando o Angular-CLI, e já coloquei o Ionic também:</p> <div class="language-Dockerfile extra-class"><pre class="language-text"><code>FROM node:12.8.0-alpine
+
+RUN apk add yarn &amp;&amp; \
+    npm install --quiet --no-progress -g @angular/cli@8.0.1 &amp;&gt; /dev/null &amp;&amp; \
+    npm install --quiet --no-progress -g ionic@4.1.2 &amp;&gt; /dev/null
+
+
+CMD [&quot;/bin/sh&quot;]
+</code></pre></div><p>O Alpine é a menor distro Linux que encontrei, e eu queria imagens bem pequenas.</p> <p>Mas o problema é que ele é totalmente seco, e dá uma puta trabalheira se precisar instalar muita coisa nele.</p> <p>O legal dele é pra distribuir só o App já rodando, mas pra montar uma máquina de desenvolvimento acho que não é a melhor opção.</p> <p>Bom, dockerfile na mão, experimentei buildar a maquineta e ver se conseguia tocar a vida e deixar as coisas rodando de vez.</p> <p>Depois de montar a máquina com Angular e conseguir instalar tudo manualmente e fazer rodar, resolvi de fazer com duas frentes:</p> <p>1 - Uma máquina com o Portinari, todo instalado e com um projeto modelo
+2 - Uma máquina com Ionic &quot;Portinarizado&quot;, também prontinha, já com tudo o que for necessário pra sair buildando app.</p> <p>Pra ambas eu pretendo fazer versões com o Tema do THF aplicado, e algumas aplicações inicializadas, tipo login, um &quot;Crudizinho&quot;, configuração de i18n. E outras coisinhas que a gente vai se batendo pra configurar num projeto THF do Zero.</p> <h2 id="hora-de-iniciar-a-maquina-do-portinari-com-base-na-de-angular-puro"><a href="#hora-de-iniciar-a-maquina-do-portinari-com-base-na-de-angular-puro" aria-hidden="true" class="header-anchor">#</a> Hora de iniciar a máquina do Portinari com base na de Angular Puro</h2> <div class="language-Dockerfile extra-class"><pre class="language-text"><code>FROM tgmti/angular:0.0.1
+
+LABEL maintainer=&quot;Thiago Mota &lt;tgmspawn@gmail.com&gt;&quot;
+LABEL version=&quot;0.0.1&quot;
+LABEL title=&quot;Portinari Start Container&quot;
+LABEL description=&quot;A started Portinari project&quot;
+LABEL &quot;https://portinari.io&quot;=&quot;Portinari UI&quot;
+
+WORKDIR /app
+
+RUN ng new my-po-project --skipInstall --skip-git
+
+WORKDIR /app/my-po-project
+
+RUN npm install
+
+RUN ng add @portinari/portinari-ui
+
+RUN npm install @portinari/portinari-templates
+
+RUN sed -i 's/ng serve/ng serve --host 0.0.0.0/g' package.json
+
+EXPOSE 4200
+
+CMD [&quot;npm&quot;,&quot;start&quot;]
+</code></pre></div><p>Nesse caso já ajustei o script <code>ng serve</code> pra servir 0.0.0.0, senão ele não aceita conexões do Host Windows (aí vai servir pra quê afimal?)</p> <p>Funcionou que foi uma beleza, aparece a página, aplicação já inicializada, achei massa! Só que...</p> <p>Se eu faço mapeamento do volume, lá se vai a pasta:
+<code>docker run --rm -v &quot;${PWD}:/app -p 4200:4200 tgmti/ionic:0.0.1-buster</code></p> <p>Claro né animal, se montar uma pasta do Host dentro do Container, o que estava lá vai ser apagado (técnicamente fica no layer da imagem e nem chega a subir pro FS do container, mas na hora de usar é o mesmo que deletado).</p> <h2 id="como-diabos-fazer-pra-mapear-uma-pasta-do-windows-e-replicar-os-dados-do-linux-pra-dentro-do-windows"><a href="#como-diabos-fazer-pra-mapear-uma-pasta-do-windows-e-replicar-os-dados-do-linux-pra-dentro-do-windows" aria-hidden="true" class="header-anchor">#</a> Como diabos fazer pra mapear uma pasta do Windows e replicar os dados do Linux pra dentro do Windows?</h2> <p>Puta merda, aí eu sofri heim. Tentei só copiar, ou mover a pasta, mas sempre demorava uma eternidade pra processar a node_modules. E é examente por causa dessa bagaça que eu quero usar container.</p> <p>Se monto uma pasta do Host dentro do container, no fim das contas replicar aquela pasta aqui é copiar arquivos entre filesystems diferentes.</p> <p>Tentei compactar a node_modules e descompactar na hora de iniciar o container, consegui várias formas de mapear o container pra fazer a replicação automática.</p> <p>Sempre que eu testava só com os arquivos da src, era uma beleza, mas colocando a node_modules o bicho sentava, e demorava as vezes mais que o npm install normal (pelo menos na minha percepção).</p> <p>Comecei a pensar em outras formas, se eu deixar a máquina rodando só dentro do Linu, e abrir o VsCode lá dentro.</p> <h2 id="vscode-docker-um-milhao-de-opcoes"><a href="#vscode-docker-um-milhao-de-opcoes" aria-hidden="true" class="header-anchor">#</a> VsCode + Docker = Um milhão de opções</h2> <p>A opção mais na cara do gol é instalar o VsCode na própria maquineta, ou em uma outra, e criar um volume compartilhado pras duas.</p> <h3 id="vscode-no-linux-compartilhando-o-volume"><a href="#vscode-no-linux-compartilhando-o-volume" aria-hidden="true" class="header-anchor">#</a> VsCode no Linux compartilhando o Volume</h3> <p>Pro VsCode eu não quis perder muito tempo, fui direto atrás de quem manja, e achei uma mina Belga que só tem imagem top <a href="https://github.com/meyskens/" target="_blank" rel="noopener noreferrer">Maartje Eyskens<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, dei pull na imagem <a href="https://hub.docker.com/r/meyskens/vscode/dockerfile" target="_blank" rel="noopener noreferrer">meyskens/vscode<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, abri um xServer e apontei o DISPLAY do Linux pra ele. Foi na hora.</p> <p>Coisa lindja de tudo, funciona bem rápido, dá pra instalar as extensões.</p> <p>Bem funcional, mas essa não é nada, eu paguei pau quando vi essa outra máquina aqui <a href="https://github.com/meyskens/docker-vscode-maartje/blob/master/Dockerfile" target="_blank" rel="noopener noreferrer">meyskens/vscode-maartje<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. Caramba meu, um ambiente completasso!!! Tem até Docker dentro do Docker, e eu fiquei tipo &quot;WTF???&quot;. Ainda bem que ela comentou:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>    <span class="token comment">#Install Docker, what??? Why are you looking that way at me?</span>
+    RUN <span class="token function">curl</span> https://get.docker.com <span class="token operator">|</span> <span class="token function">bash</span>
+    RUN <span class="token function">apt-get</span> -y <span class="token function">install</span> docker-compose
+</code></pre></div><p>Hahaha, depois de perder um tempão admirando estas configurações, e mais umas outras que foram aparecendo, voltei pra minha saga.
+Montei um docker-compose.yml pra subir as duas maquinetas juntas</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.7&quot;</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+
+<span class="token key atrule">portinari</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> tgmti/portinari
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span> 
+        <span class="token punctuation">-</span> 4200<span class="token punctuation">:</span><span class="token number">4200</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+        <span class="token punctuation">-</span> portinari_app<span class="token punctuation">:</span>/app
+
+<span class="token key atrule">vscode</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> meyskens/vscode
+    <span class="token key atrule">environments</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> DISPLAY=10.0.0.11<span class="token punctuation">:</span><span class="token number">0.0</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> portinari_app<span class="token punctuation">:</span>/app
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token key atrule">portinari_app</span><span class="token punctuation">:</span>
+
+</code></pre></div><p><code>docker-compose up -d</code> e &quot;seje feliz&quot;! Sem grilos, sem problemas, sem as minhas extensões e configurações.</p> <p>Ai ai, eu ia ter que ficar horas trabalhando em cima pra montar uma máquina do meu jeito, igual a da menina Belga. E outra, eu quero usar o VsCode no Windows, não porque é melhor, só porque eu não consegui fazer ainda.</p> <p>Então, já que desse jeito eu sei que funciona, parti pra ver os outros links que apareceram na pesquisa <code>docker vscode</code>.</p> <h3 id="vscode-server-dentro-do-container"><a href="#vscode-server-dentro-do-container" aria-hidden="true" class="header-anchor">#</a> VsCode Server dentro do Container</h3> <p>A Microsoft lançou um pacote de extensões sensacional pra trabalhar com Docker.
+A extensão Docker eu já uso a um tempo, apesar de que eu costumo mesmo é rodar um docker exec, ao invés de clicar com o direito em attach terminal.</p> <p>Só que o pacote <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" rel="noopener noreferrer">Remote Development<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> é coisa de maluco:</p> <ul><li>Remote SSH</li> <li>Remote Containers</li> <li>Remote WSL</li></ul> <p>Caramba, fui direto nessa terceira, rodei um docker run dentro do wsl, criando uma pasta na home e mapeando pro volume, mas deu pau nas permissões. Putz, deixei pra lá (depois tenho que tentar outra vez).</p> <p>Remote SSH eu já sabia como ia funcionar, dei uma fuçada pra ver se tinha algum jeito de fazer sem mexer no dockerfile, humm, serve um monte, mas não pra o que eu queria agora.</p> <p>Remote Container é show. Dá pra selecionar quais extenções serão instadas dentro do container, e ela já sai fazendo tudo sozinha, configurando as portas, instalando o VSCode Server, Instalando as extenções, monta o docker-compose, cria um Dockerfile.</p> <p>Faz tudo sozinha. Vai ser bem útil no futuro, mas ainda demora muito, e também, se eu tivesse afim de pegar o negócio pronto, não tinha partido do zero (ah, lembrei agora foi nessa hora que eu mudei do alpine pro Debian Buster Slim na verdade, o VsCode não conseguia instalar as coisas no alpine, o vscode-insiders consegue, mas deu pau, acho até que vou tentar voltar pro alpine depois).</p> <h3 id="ainda-nao-tava-do-jeito-que-eu-queria"><a href="#ainda-nao-tava-do-jeito-que-eu-queria" aria-hidden="true" class="header-anchor">#</a> Ainda não tava do jeito que eu queria.</h3> <p>Não que as opções que achei não fossem sensacionais, é que, pra compartilhar isso, tem que ser bem fácil, e de preferência rodar no Windows Home com Dockertools da firma, por isso, voltei pra pesquisa.</p> <p>Pensei um pouco mais no que aprendi nessas brincadeiras.</p> <ul><li>Quando eu compartilho um volume com o Windows (<code>-v c:\temp:/app</code>) dá pra usar localmente, mas fica lento pra copiar a node_modules</li> <li>Se eu mapear a pasta do app inteira, tenho que usar recursos bem mais complicados pra acessar a pasta através de outro container, ou com as extenções do VsCode.</li> <li>Mas se eu criar o volume só na estrutura dos containers, fica super rápido.</li></ul> <h1 id="e-finalmente"><a href="#e-finalmente" aria-hidden="true" class="header-anchor">#</a> E finalmente</h1> <pre><code>E se eu mapear o /app, mas não o /app/node_modules?
+</code></pre> <p><strong>Google, diz aí</strong>: <code>docker map volume exclude subfolder</code></p> <p>E o stackoverflow nosso de cada dia não deixou na mão: <a href="https://stackoverflow.com/questions/29181032/add-a-volume-to-docker-but-exclude-a-sub-folder" target="_blank" rel="noopener noreferrer">Add a volume to Docker, but exclude a sub-folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <pre><code>Using docker-compose I'm able to use node_modules locally, but ignore it in the docker container using the following syntax in the docker-compose.yml
+</code></pre> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'./angularApp:/opt/app'</span>
+    <span class="token punctuation">-</span> /opt/app/node_modules/
+</code></pre></div><pre><code>So everything in ./angularApp is mapped to /opt/app and then I create another mount volume /opt/app/node_modules/ which is now empty directory - even if in my local machine ./angularApp/node_modules is not empty.
+</code></pre> <p>Caramba, porque que sempre tem um jeito 300x mais simples de fazer as coisas quando a gente tentou um monte de coisa mais difícil.</p> <p>Funcionou que é uma maravilha. Navalha de Occam, a explicação mais fácil, a menor quantidade de passos. Que coisa de loko!!!</p> <hr> <h1 id="compartilhando"><a href="#compartilhando" aria-hidden="true" class="header-anchor">#</a> Compartilhando:</h1> <p>Ainda vou mexer nesse repo, mas a versão de agora está taggeada como 0.0.1.</p> <p>https://github.com/tgmti/docker-dev-utils</p> <h2 id="ficou-um-pequeno-problema-ainda"><a href="#ficou-um-pequeno-problema-ainda" aria-hidden="true" class="header-anchor">#</a> Ficou um pequeno problema ainda:</h2> <p>Quando mexo em um arquivo pelo Windows, o servidor não recompila o código automaticamente.</p> <p>Pra resolver eu dou um &quot;toque&quot; nele pelo shell do container: <code>touch src/app/app.component.html</code></p> <p>Anotei essa <a href="https://github.com/tgmti/docker-dev-utils/issues/1" target="_blank" rel="noopener noreferrer">Issue<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> pra resolver outra hora.</p> <hr> <h1 id="conclusao"><a href="#conclusao" aria-hidden="true" class="header-anchor">#</a> Conclusão</h1> <p>Passei trabalho?</p> <ul><li>Nãaa, que isso?</li></ul> <p>Valeu a pena?</p> <ul><li>Bagarai véi. Tentando fazer a bagaça funcionar do meu jeito, sem pegar muita coisa pronta, aprendi uma porrada de coisa. Sobre Node, Angular e Ionic Cli, VsCode Remote, Linux e principalmente Docker</li></ul> <hr> <h1 id="tl-dr"><a href="#tl-dr" aria-hidden="true" class="header-anchor">#</a> TL;DR</h1> <p>Pra montar tudo numa máquina só, basta seguir a receitinha:</p> <p>Dockerfile</p> <div class="language-Dockerfile extra-class"><pre class="language-text"><code>FROM node:12.8.1-buster-slim
+
+LABEL maintainer=&quot;Thiago Mota &lt;tgmspawn@gmail.com&gt;&quot;
+LABEL version=&quot;0.0.1&quot;
+LABEL title=&quot;Portinari Start Container&quot;
+LABEL description=&quot;A started Portinari project&quot;
+LABEL &quot;https://portinari.io&quot;=&quot;Portinari UI&quot;
+
+# Determina se vai iniciar o Server ao criar/iniciar o container
+ENV INIT_NG_SERVER=true
+
+EXPOSE 4200
+
+RUN apt update &amp;&amp; \
+    apt install -y yarn
+
+RUN npm install -g @angular/cli
+RUN npm install -g npm-add-script
+
+WORKDIR /
+
+RUN ng new app --skipInstall --skip-git
+
+WORKDIR /app
+RUN npm install
+RUN ng add @portinari/portinari-ui
+RUN npm install @portinari/portinari-templates
+
+RUN sed -i 's/ng serve/ng serve --host 0.0.0.0/g' package.json
+
+COPY ./start.sh /
+RUN chmod 777 /start.sh
+
+# Guardo os arquivos gerados na pasta /template, exceto os node_modules
+RUN mkdir /template/
+RUN cp -rf `ls -A | grep -v &quot;node_modules&quot;` /template/
+
+COPY ./start.sh /start.sh
+CMD [&quot;/start.sh&quot;]
+
+</code></pre></div><p>start.sh</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/sh</span>
+
+<span class="token keyword">if</span> <span class="token function">find</span> angular.json 2<span class="token operator">&gt;</span>/dev/null<span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token keyword">echo</span> <span class="token string">&quot;App exists&quot;</span>
+<span class="token keyword">else</span>
+    <span class="token keyword">echo</span> <span class="token string">&quot;Copy template to app directory...&quot;</span>
+    <span class="token function">cp</span> -rf /template/* /app/
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token variable">$INIT_NG_SERVER</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token keyword">echo</span> <span class="token string">&quot;Starting ionic Server...&quot;</span>
+    <span class="token function">npm</span> start
+<span class="token keyword">else</span>
+    <span class="token function">bash</span>
+<span class="token keyword">fi</span>
+</code></pre></div><p>docker-compose.yml</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.7&quot;</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+
+  <span class="token key atrule">portinari</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> tgmti/portinari<span class="token punctuation">:</span>0.0.1<span class="token punctuation">-</span>buster
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 4200<span class="token punctuation">:</span><span class="token number">4200</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> .<span class="token punctuation">:</span>/app
+      <span class="token punctuation">-</span> node_modules<span class="token punctuation">:</span>/app/node_modules
+    <span class="token key atrule">tty</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> INIT_IONIC_SERVER=false
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">node_modules</span><span class="token punctuation">:</span>
+</code></pre></div><p>Executou: <code>docker-compose up</code></p> <p>E já aparece:</p> <p><img src="/advpl/assets/img/tgm-portinari-docker-page.fab6f21d.jpg" alt="TGM Portinari Docker page"></p> <hr></div></article> <section class="post-meta main-div" data-v-3cabf638><section class="post-date clearfix" data-v-3cabf638><span class="create-date" data-v-3cabf638>
+      Criado : 2019-09-03
+    </span> <!----></section> <section class="post-links" data-v-3cabf638><a href="/advpl/posts/2019/09/01/regex-advpl.html" class="post-link" data-v-3cabf638>
+      Anterior : RegExp + ADVPL
+    </a> <!----></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-7f74dc4c><div class="info-card main-div" data-v-6b5af565 data-v-7f74dc4c><div class="info-card-header" data-v-6b5af565><img src="/advpl/assets/img/avatar.jpg" alt="TGM" class="info-avatar" data-v-6b5af565></div> <div class="info-card-body" data-v-6b5af565><section class="info-nickname" data-v-6b5af565>
+      TGM
+    </section> <section class="info-desc" data-v-6b5af565>Thiago Mota</section> <section class="info-contact" data-v-6b5af565><section data-v-6b5af565><span title="Cascavel - PR, Brasil" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>Cascavel - PR, Brasil</title><use xlink:href="#icon-location" data-v-6b5af565 data-v-6b5af565></use></svg><span class="info-text" data-v-6b5af565 data-v-6b5af565>
+          Cascavel - PR, Brasil
+        </span></span></section> <!----> <section data-v-6b5af565><a href="mailto:tgmspawn@gmail.com" title="tgmspawn@gmail.com" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>tgmspawn@gmail.com</title><use xlink:href="#icon-email" data-v-6b5af565 data-v-6b5af565></use></svg><span class="info-text" data-v-6b5af565 data-v-6b5af565>
+          tgmspawn@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-6b5af565><section class="info-sns clearfix" data-v-6b5af565><a href="https://github.com/tgmti" target="_blank" class="sns-link" data-v-6b5af565><span title="GitHub: tgmti" class="sns-icon" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1.5em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>GitHub: tgmti</title><use xlink:href="#icon-github" data-v-6b5af565 data-v-6b5af565></use></svg></span></a><a href="https://www.facebook.com/tgmti" target="_blank" class="sns-link" data-v-6b5af565><span title="Facebook: tgmti" class="sns-icon" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1.5em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>Facebook: tgmti</title><use xlink:href="#icon-facebook" data-v-6b5af565 data-v-6b5af565></use></svg></span></a><a href="http://www.linkedin.com/in/tgmota" target="_blank" class="sns-link" data-v-6b5af565><span title="LinkedIn: tgmota" class="sns-icon" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1.5em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>LinkedIn: tgmota</title><use xlink:href="#icon-linkedin" data-v-6b5af565 data-v-6b5af565></use></svg></span></a><a href="https://twitter.com/tgm_ti" target="_blank" class="sns-link" data-v-6b5af565><span title="Twitter: tgm_ti" class="sns-icon" data-v-6b5af565 data-v-6b5af565><svg class="icon" style="font-size:1.5em;" data-v-6b5af565 data-v-6b5af565><title data-v-6b5af565 data-v-6b5af565>Twitter: tgm_ti</title><use xlink:href="#icon-twitter" data-v-6b5af565 data-v-6b5af565></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-7f74dc4c><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>Índice</span> <div class="post-nav-toc"><ul><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#motivacao">Motivação</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#testes-basicos">Testes basicos</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#hora-de-iniciar-a-maquina-do-portinari-com-base-na-de-angular-puro">Hora de iniciar a máquina do Portinari com base na de Angular Puro</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#como-diabos-fazer-pra-mapear-uma-pasta-do-windows-e-replicar-os-dados-do-linux-pra-dentro-do-windows">Como diabos fazer pra mapear uma pasta do Windows e replicar os dados do Linux pra dentro do Windows?</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#vscode-docker-um-milhao-de-opcoes">VsCode + Docker = Um milhão de opções</a><ul><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#vscode-no-linux-compartilhando-o-volume">VsCode no Linux compartilhando o Volume</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#vscode-server-dentro-do-container">VsCode Server dentro do Container</a></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#ainda-nao-tava-do-jeito-que-eu-queria">Ainda não tava do jeito que eu queria.</a></li></ul></li><li><a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#ficou-um-pequeno-problema-ainda">Ficou um pequeno problema ainda:</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/advpl/posts/2019/09/03/portinari-docker-quick-start.html#post-comments">
+      Comentários
+    </a></div></div></aside></div> <footer class="footer" data-v-427c175a><p class="sns-links" data-v-427c175a><a href="https://github.com/tgmti" target="_blank" class="sns-link" data-v-427c175a><span title="GitHub: tgmti" class="sns-icon" data-v-427c175a data-v-427c175a><svg class="icon" style="font-size:25px;" data-v-427c175a data-v-427c175a><title data-v-427c175a data-v-427c175a>GitHub: tgmti</title><use xlink:href="#icon-github" data-v-427c175a data-v-427c175a></use></svg></span></a><a href="https://www.facebook.com/tgmti" target="_blank" class="sns-link" data-v-427c175a><span title="Facebook: tgmti" class="sns-icon" data-v-427c175a data-v-427c175a><svg class="icon" style="font-size:25px;" data-v-427c175a data-v-427c175a><title data-v-427c175a data-v-427c175a>Facebook: tgmti</title><use xlink:href="#icon-facebook" data-v-427c175a data-v-427c175a></use></svg></span></a><a href="http://www.linkedin.com/in/tgmota" target="_blank" class="sns-link" data-v-427c175a><span title="LinkedIn: tgmota" class="sns-icon" data-v-427c175a data-v-427c175a><svg class="icon" style="font-size:25px;" data-v-427c175a data-v-427c175a><title data-v-427c175a data-v-427c175a>LinkedIn: tgmota</title><use xlink:href="#icon-linkedin" data-v-427c175a data-v-427c175a></use></svg></span></a><a href="https://twitter.com/tgm_ti" target="_blank" class="sns-link" data-v-427c175a><span title="Twitter: tgm_ti" class="sns-icon" data-v-427c175a data-v-427c175a><svg class="icon" style="font-size:25px;" data-v-427c175a data-v-427c175a><title data-v-427c175a data-v-427c175a>Twitter: tgm_ti</title><use xlink:href="#icon-twitter" data-v-427c175a data-v-427c175a></use></svg></span></a></p> <p data-v-427c175a><span data-v-427c175a>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-427c175a>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/advpl/assets/js/app.25d80dd1.js" defer></script><script src="/advpl/assets/js/6.b5ccae0f.js" defer></script><script src="/advpl/assets/js/8.7065637d.js" defer></script>
+  </body>
+</html>
