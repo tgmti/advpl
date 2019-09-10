@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp --port 8080 --no-cache --host 0.0.0.0",
     "build": "vuepress build docs",
-    "docker": "docker-compose up -d && docker-compose exec advpl bash"
+    "docker": "docker-compose up & sleep 5 && docker-compose exec advpl bash"
   },
   "repository": {
     "type": "git",
