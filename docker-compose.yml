@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+
+  advpl:
+    image: tgmti/advplblog:latest
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/advpl
+    tty: true

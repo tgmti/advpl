@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev docs --temp .temp --port 8080 --no-cache --host 0.0.0.0",
     "build": "vuepress build docs"
   },
   "repository": {

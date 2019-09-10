@@ -7142,17 +7142,17 @@ vuepress-plugin-table-of-contents@^1.0.2:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-table-of-contents/-/vuepress-plugin-table-of-contents-1.0.2.tgz#0ab6b7440a388cc3921d788d41c12c30deae1f74"
   integrity sha512-RQXm8pmwtcRuTJjsvZg9iVjpcQxGXNtMw/8gicUOUB6rmKJihLvocRjIxdbNyiNUFlUqr7sRttzBFypGL7Uicw==
 
-vuepress-plugin-zooming@^1.0.0:
+vuepress-plugin-zooming@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-zooming/-/vuepress-plugin-zooming-1.1.2.tgz#1751f043221500132913904c3bcd3aef6830b116"
   integrity sha512-z9GvOKlU2CkiW55R2v3F1b+WvOIFeyRS31uN9PLHb4eDfXteOQtKMsWP+Le7lMz0KP9R1zy+8kt/3C35rDfDYg==
   dependencies:
     zooming "^2.1.1"
 
-vuepress-theme-meteorlxy@^1.0.0-alpha.25:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-meteorlxy/-/vuepress-theme-meteorlxy-1.3.0.tgz#7485330025e4ce3d4481a7ff56fc3ba1535a91c5"
-  integrity sha512-pX/tV5fQ1VSty9tnEnB89/FqFzEUqbHBpriRU0PFj6Bzg75zCwuJW6iZk60jck//W70pjmE+xZQAIgK27Xr5VA==
+vuepress-theme-meteorlxy@^1.3.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-meteorlxy/-/vuepress-theme-meteorlxy-1.3.1.tgz#d11bd44afba28cd3d6efb04b286e5e40eeb505e9"
+  integrity sha512-eA9f58aqjFkCDckBoBHz9JiLea+L6sKVceQ2sZDPYzCz6VTamxtWrDgNPOal0BdxUQbXQMCcE0n2VhDniQVf4A==
   dependencies:
     "@vssue/api-github-v3" "^1.0.0"
     "@vssue/vuepress-plugin-vssue" "^1.0.0"
@@ -7169,7 +7169,7 @@ vuepress-theme-meteorlxy@^1.0.0-alpha.25:
     vuepress-plugin-nprogress "^1.1.0"
     vuepress-plugin-smooth-scroll "^0.0.3"
     vuepress-plugin-table-of-contents "^1.0.2"
-    vuepress-plugin-zooming "^1.0.0"
+    vuepress-plugin-zooming "^1.1.2"
 
 vuepress@1.0.0-alpha.44:
   version "1.0.0-alpha.44"
